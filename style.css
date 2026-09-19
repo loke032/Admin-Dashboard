@@ -4,11 +4,13 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 
 
 body, html {
+    overflow: hidden;
     height: 100%;
     width: 100%;
     background-color: #05070e;
@@ -413,6 +415,11 @@ a {
 }
 
 @media (min-width: 1000px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
     .container {
         height: 100%;
         width: 70%
