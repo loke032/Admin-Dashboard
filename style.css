@@ -1,4 +1,566 @@
+@import url(https://fonts.bunny.net/css?family=alatsi:400);
+
+
 * {
     margin: 0;
     padding: 0;
+}
+
+
+
+body, html {
+    height: 100%;
+    width: 100%;
+    background-color: #05070e;
+    display: flex;
+    align-items: center;
+
+    font-family: "Alatsi";
+    font-size: 16px;
+}
+
+.container {
+    height: 70%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 4fr;
+
+    grid-template-areas: 
+    "sidebar header"
+    "sidebar main";
+
+}
+
+
+
+/*header*/
+
+.header {
+    grid-area: header;
+    z-index: 1;
+    
+    background-color: #1e293b;
+    box-shadow: 1px 5px 10px rgb(247, 246, 246, 0.3);
+    color: white;
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "top-left top-right"
+    "bottom-left bottom-right"
+    ;
+}
+
+.top-left-header {
+    grid-area: top-left;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.top-right-header {
+    grid-area: top-right;
+
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 20px;
+}
+
+.bottom-left-header {
+    grid-area: bottom-left;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.name-space {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.bottom-right-header {
+    grid-area: bottom-right;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+
+.search-icon, .bell-icon {
+    filter: invert(1);
+    height: 20px;
+    width: 20px;
+}
+
+.profile {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.tiny-profile {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+input {
+    width: 400px;
+    background-color: rgb(56, 56, 56);
+    color: white;
+    border-radius: 10px;
+    padding: 2px;
+
+    border: none;
+    outline: none;
+    
+}
+
+.tiny-text {
+    font-size: 12px;
+}
+
+.name {
+    font-size: 18px;
+}
+
+button {
+    border-radius: 20px;
+    padding: 8px;
+    width: 70px;
+    font-size: 12px;
+    outline: none;
+    border: none;
+    background-color: #2563eb;
+}
+
+
+
+
+/*-------Sidebar------*/
+
+
+
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: #2563eb;
+    z-index: 2;
+
+
+}
+
+.sidebar-container {
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 18px;
+}
+
+.top-links, .bottom-links {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.icon {
+    height: 16px;
+    width: auto;
+}
+
+.dashboard {
+    height: 35px;
+    width: auto;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-item-dashboard {
+    display: flex;
+    gap: 6px;
+    padding: 8px;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+
+
+
+/*----------Main-------*/
+
+
+
+
+.main {
+    
+    grid-area: main;
+    background-color: #111827;
+
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "projects announcements"
+    "projects trending"
+    ;
+
+    color: white;
+    padding: 25px 22px 35px 15px;
+    gap: 10px;
+}
+
+.projects {
+    height: 100%;
+    grid-area: projects;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-right: 5px;
+}
+
+.projects-box {
+    flex: 1;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: black;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 20px 10px 10px 20px;
+
+    border-left: 6px solid rgb(185, 136, 0);
+    box-shadow: 2px 3px 5px rgba(255, 255, 255, 0.253);
+
+}
+
+.card-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: end;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.projects-text {
+    font-size: 12px;
+    color: rgb(219, 219, 219);
+}
+
+
+.card img {
+    height: 20px;
+    width: 20px;
+    filter: invert(1);
+}
+
+
+
+
+/*------Announcements-----*/
+
+
+
+.announcements {
+    grid-area: announcements;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.announcements-box {
+    flex: 1;
+
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 2px 3px 5px rgba(255, 255, 255, 0.253);
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 20px;
+    justify-content: center;
+
+    font-size: 10px;
+}
+
+.site-maintenance-text,
+.community-share-day-text,
+.updated-privacy-policy-text {
+    color: gray;
+    font-size: 9px;
+}
+
+.border {
+    height: 1px;
+    background-color: gray;
+}
+
+/*-------Trending-------*/
+
+
+
+.trending {
+    grid-area: trending;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 0px;
+}
+
+.trending-box {
+    flex: 1;
+
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 2px 3px 5px rgba(255, 255, 255, 0.253);
+
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    gap: 10px;
+    justify-content: center;
+}
+
+.person {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+}
+
+.trending-name {
+    font-size: 12px;
+}
+
+.trending-project {
+    font-size: 10px;
+}
+
+.trending-profile {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+/*----others----*/
+
+
+
+img {
+    display: block;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.button-secret {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.secret {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+@media (min-width: 1000px) {
+    .container {
+        height: 100%;
+        width: 70%
+    }
+    body, html {
+        justify-content: center;
+        font-size: 20px;
+    }
+    .announcements-box {
+        gap: 20px;
+        font-size: 15px;
+    }
+    .site-maintenance-text,
+    .community-share-day-text,
+    .updated-privacy-policy-text {
+        color: gray;
+        font-size: 13px;
+    }
+    .trending-name {
+        font-size: 17px;
+    }
+
+    .trending-project {
+        font-size: 15px;
+    }
+
+    .trending-profile {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    .trending-box {
+        gap: 15px;
+    }
+    .projects-text {
+        font-size: 16px;
+    }
+
+
+
+    /*----header----*/
+
+    .search-icon, .bell-icon {
+        filter: invert(1);
+        height: 30px;
+        width: 30px;
+    }
+
+    .profile {
+        width: 85px;
+        height: 85px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .tiny-profile {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    input {
+        width: 600px;
+        height: 25px;
+        background-color: rgb(56, 56, 56);
+        color: white;
+        border-radius: 15px;
+        padding: 4px;
+
+        border: none;
+        outline: none;
+        
+    }
+
+    .tiny-text {
+        font-size: 16px;
+    }
+
+    .name {
+        font-size: 24px;
+    }
+
+    button {
+        border-radius: 30px;
+        padding: 10px;
+        width: 90px;
+        height: 40px;
+        font-size: 16px;
+        outline: none;
+        border: none;
+        background-color: #2563eb;
+    }
+
+
+
+
+    /*-----sidebar------*/
+
+    .sidebar {
+        grid-area: sidebar;
+        background-color: #2563eb;
+        z-index: 2;
+
+
+    }
+
+    .sidebar-container {
+        height: 55%;
+        display: flex;
+        flex-direction: column;
+        gap: 70px;
+        padding: 24px;
+    }
+
+    .top-links, .bottom-links {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .sidebar-item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 22.5px;
+    }
+
+    .icon {
+        height: 22px;
+        width: auto;
+    }
+
+    .dashboard {
+        height: 45px;
+        width: auto;
+        padding: 0;
+        margin: 0;
+    }
+
+    .sidebar-item-dashboard {
+        display: flex;
+        gap: 8px;
+        padding: 10px;
+        align-items: center;
+        margin-bottom: 15px;
+        font-size: 25px;
+    }
 }
