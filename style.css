@@ -8,7 +8,6 @@
 }
 
 
-
 body, html {
     overflow: hidden;
     height: 100%;
@@ -121,7 +120,8 @@ input {
     background-color: rgb(56, 56, 56);
     color: white;
     border-radius: 10px;
-    padding: 2px;
+    padding: 3px;
+    padding-left: 7px;
 
     border: none;
     outline: none;
@@ -182,6 +182,9 @@ button {
     flex-direction: row;
     align-items: center;
     gap: 15px;
+
+    border-radius: 8px;
+    transition: 0.2s;
 }
 
 .icon {
@@ -203,6 +206,8 @@ button {
     align-items: center;
     margin-bottom: 10px;
     font-size: 20px;
+
+    transition: 0.2s;
 }
 
 
@@ -260,6 +265,7 @@ button {
     border-left: 6px solid rgb(185, 136, 0);
     box-shadow: 2px 3px 5px rgba(255, 255, 255, 0.253);
 
+    transition: 0.2s;
 }
 
 .card-buttons {
@@ -315,6 +321,7 @@ button {
     justify-content: center;
 
     font-size: 10px;
+    transition: 0.2s;
 }
 
 .site-maintenance-text,
@@ -354,6 +361,7 @@ button {
     padding: 15px;
     gap: 10px;
     justify-content: center;
+    transition: 0.2s;
 }
 
 .person {
@@ -398,23 +406,144 @@ a {
 }
 
 .button-secret {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: blue;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0);
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    margin-left: 168px;
+    margin-top: 8px;
 }
+
 
 .secret {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
 }
 
+.secret-body {
+    background-image: url("icons/void.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.projects-header {
+    display: flex;
+    justify-content: start;
+}
+
+
+/*-------Hover--------*/
+
+
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 4px 7px 10px rgba(255, 255, 255, 0.253);
+}
+
+.sidebar-item:hover {
+    transform: translateX(5px);
+}
+
+.sidebar-item-dashboard:hover {
+    transform: scale(1.05);
+}
+
+button {
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+.card-buttons a {
+    transition: 0.2s;
+}
+
+.card-buttons a:hover {
+    transform: translateY(-5px)
+}
+
+.profile, .tiny-profile, .trending-profile {
+    transition: 0.2s;
+}
+.profile:hover, .trending-profile:hover {
+    transform: scale(1.2);
+}
+.trending-profile:active {
+    transform: scale(2);
+}
+
+.announcements-box:hover, .trending-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 4px 7px 10px rgba(255, 255, 255, 0.253);
+}
+
+.announcements-text, .trending-text, .projects-heading {
+    transition: 0.2s;
+}
+.announcements-text:hover, .trending-text:hover, .projects-heading:hover {
+    transform: scale(1.08);
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.253);
+}
+
+.trending-name-project {
+    transition: 0.2s;
+}
+.trending-name-project:hover {
+    transform: scale(1.1);
+}
+
+.site-maintenance, .community-share-day, .updated-privacy-policy {
+    transition: 0.2s;
+    transform-origin: left center;
+}
+.site-maintenance:hover, .community-share-day:hover, .updated-privacy-policy:hover {
+    transform: scale(1.1);
+    cursor: none;
+}
+.name-space {
+    transition: 0.2s;
+}
+.name-space:hover {
+    transform: translateX(10px) scale(1.035);
+    
+}
+
+.bell-icon, .tiny-profile, .tiny-name, .search-icon, input {
+    transition: 0.2s;
+}
+.bell-icon:hover, .tiny-name:hover {
+    transform: translateY(-5px);
+}
+.tiny-profile:hover {
+    transform: translateY(-6px) scale(1.1);
+}
+.search-icon:hover {
+    transform: scale(1.2);
+}
+input {
+    transform-origin: left center;
+}
+input:hover {
+    transform: scaleY(1.2) scaleX(1.1);
+}
+/*--------big screen--------*/
+
+
 @media (min-width: 1000px) {
+    .site-maintenance, .community-share-day, .updated-privacy-policy {
+        padding-right: 5px;
+    }
+    .button-secret {
+        background-color: rgba(255, 255, 255, 0);
+        margin-right: 620px;
+        margin-top: 15px;
+        width: 298px;
+        height: 298px;
+    }
     * {
         margin: 0;
         padding: 0;
